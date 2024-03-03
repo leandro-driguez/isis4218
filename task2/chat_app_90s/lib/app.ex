@@ -1,10 +1,11 @@
 defmodule App do
+  use Application
+
   @moduledoc """
   Defines the main application module for a chat room.
   This module handles the initialization and command processing for the chat application.
   """
 
-  use Application
   def start(_type, _args) do
     {:ok, self()}
   end

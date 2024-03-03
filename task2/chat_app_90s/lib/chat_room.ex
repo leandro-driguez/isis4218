@@ -1,20 +1,19 @@
 defmodule ChatRoom do
-  @moduledoc """
-  A GenServer-based ChatRoom implementation.
-
-  Supports operations for subscribing to the chat room, unsubscribing, and sending messages to all subscribers.
-  """
-
   use GenServer
 
-  @doc """
-  Starts a GenServer process with initial state.
-
-  ## Parameters
-  - opts: Options for the GenServer process.
+  @moduledoc """
+  A GenServer-based ChatRoom implementation that supports subscribing and unsubscribing processes,
+  and broadcasting messages to all subscribers.
   """
+
+  # Starts a GenServer process for the ChatRoom with initial state
   def start_link(opts \\ []) do
     GenServer.start_link(__MODULE__, %{subscribers: %{}, messages: []}, opts)
+  end
+
+  # Initializes the GenServer state
+  def init(initial_state) do
+    {:ok, initial_state}
   end
 
   @doc """

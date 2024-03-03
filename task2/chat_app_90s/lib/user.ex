@@ -1,12 +1,12 @@
 defmodule User do
+  use GenServer
+
   @moduledoc """
   Represents a user in the chat application.
 
   This GenServer module handles user-related actions such as subscribing to a chat room,
   posting messages, and managing received messages.
   """
-
-  use GenServer
 
   @doc """
   Starts a linked GenServer process for a user.

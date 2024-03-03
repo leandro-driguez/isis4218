@@ -21,8 +21,6 @@ defmodule ChatApp90s.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   def deps do
-    [
-      {:mutex, "~> 1.3"},
-    ]
+    [ ]
   end
 end
