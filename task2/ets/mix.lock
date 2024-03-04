@@ -1,0 +1,3 @@
+%{
+  "mutex": {:hex, :mutex, "1.3.3", "e3ec9e26ec55cf29081c425e66f17e679cfce1c7533dec07da29244ec471d29c", [:mix], [], "hexpm", "9d243a23f92b426c1acd7c08b20d3442ae3d6cdfe6983173deeaddee6e20fa3e"},
+}
