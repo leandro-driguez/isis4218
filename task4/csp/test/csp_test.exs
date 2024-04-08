@@ -6,7 +6,7 @@ defmodule CspTest do
     chatroom = Chat.start
 
     {chatroom, user1} = Chat.add_user(chatroom, "user1")
-    {chatroom, user2}   = Chat.add_user(chatroom, "user2")
+    {chatroom, user2} = Chat.add_user(chatroom, "user2")
 
     Chat.write_message(user1, "both users will receive this message")
     Chat.write_message(user2, "this message too")
@@ -14,10 +14,10 @@ defmodule CspTest do
     Chat.recv_messages(chatroom)
 
     user1 = User.recv_msg(user1)
-    user2   = User.recv_msg(user2)
+    user2 = User.recv_msg(user2)
 
     user1 = User.recv_msg(user1)
-    user2   = User.recv_msg(user2)
+    user2 = User.recv_msg(user2)
 
     chatroom = Chat.user_delete(chatroom, user2)
 
